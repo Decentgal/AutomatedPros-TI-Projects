@@ -1,5 +1,4 @@
-[
-    # AWS Cloud/DevOps Automation: Provisioning & Compliance
+AWS Cloud/DevOps Automation: Provisioning & Compliance
 
 This repository demonstrates a production-ready approach to Infrastructure as Code (IaC) using Terraform and Configuration Management using Chef, specifically designed to address secure, scalable, and highly available AWS architectures for AutomatedPros.
 
@@ -56,7 +55,7 @@ Configure and enable Nginx.
 
 3. Compliance Audit
 
-To verify the environment against security standards:
+To verify the environment against security standards, I used:
 
 inspec exec https://github.com/your-username/nginx-audit -t ssh://ec2-user@98.81.152.48
 
@@ -65,5 +64,3 @@ Cost Optimization & Ownership
 To maintain a bias for action and ownership, all resources are tagged with Project: AutomatedPros-Demo. When testing was complete, I deprovisioned the environment instantly to prevent waste using:
 
 $ terraform destroy -auto-approve
-
-]
