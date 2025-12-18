@@ -34,6 +34,8 @@ Gateways: Internet Gateway (IGW) attached for public ingress/egress.
 Security: A dedicated Security Group allowing inbound traffic only on Port 80 (HTTP) from 0.0.0.0/0.
 
 Compute: A t2.micro EC2 instance running Amazon Linux 2, automatically provisioned with Nginx.
+<img width="1365" height="642" alt="ap-ec2" src="https://github.com/user-attachments/assets/6880b36a-ed6a-47a9-863b-7760e36f7c3f" />
+
 
 How to Deploy
 
@@ -42,6 +44,9 @@ How to Deploy
 $ terraform init
 $ terraform plan
 $ terraform apply -auto-approve
+
+<img width="1365" height="767" alt="ap success" src="https://github.com/user-attachments/assets/7d3fa23f-251a-4608-9d4d-3ffa76fbeb2a" />
+
 
 
 2. Automated Configuration
@@ -52,6 +57,8 @@ Update system packages.
 Install the Chef Infra Client.
 
 Configure and enable Nginx.
+<img width="1365" height="734" alt="ap-website" src="https://github.com/user-attachments/assets/4476ed5f-f627-4e4f-875d-ffd7d374bfa2" />
+
 
 3. Compliance Audit
 
@@ -68,8 +75,7 @@ Cost Optimization & Ownership
 To maintain a bias for action and ownership, all resources are tagged with Project: AutomatedPros-Demo. When testing was complete, I deprovisioned the environment instantly to prevent waste using:
 
 $ terraform destroy -auto-approve
-<<<<<<< HEAD
 
-]
-=======
->>>>>>> 254650cb636da890d8ec661f6ce2c8d60429f793
+I saved the state file at a remote backend on Terraform cloud
+<img width="1365" height="767" alt="ap final" src="https://github.com/user-attachments/assets/a9d07a5e-aa8a-46a4-bee5-c60fcbc619e5" />
+
