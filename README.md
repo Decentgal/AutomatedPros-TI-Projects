@@ -1,8 +1,6 @@
-    # AWS Cloud/DevOps Automation: Provisioning & Compliance
+Cloud/DevOps Automation on AWS: Provisioning & Compliance
 
 This repository demonstrates a production-ready approach to Infrastructure as Code (IaC) using Terraform and Configuration Management using Chef, specifically designed to address secure, scalable, and highly available AWS architectures for AutomatedPros.
-
-Project Overview
 
 This project automates the deployment of a secure web environment on AWS. It bridges the gap between foundational infrastructure provisioning and OS-level application configuration.
 
@@ -15,7 +13,7 @@ Security & Compliance: Implementing least-privilege Security Groups and automate
 
 Cost Optimization: Tagging resources for granular cost analysis and using a destroy-on-idle workflow.
 
-Tech Stack
+Technologies
 Cloud Provider: AWS (VPC, EC2, IGW, Route Tables)
 
 IaC: Terraform v1.0+
@@ -26,7 +24,7 @@ Compliance: Chef InSpec
 
 VCS: GitHub
 
-Architecture Detail
+Architecture
 Network: A custom VPC (10.0.0.0/16) with a Public Subnet for web traffic and a Private Subnet for future database expansion.
 
 Gateways: Internet Gateway (IGW) attached for public ingress/egress.
@@ -37,7 +35,7 @@ Compute: A t2.micro EC2 instance running Amazon Linux 2, automatically provision
 <img width="1365" height="642" alt="ap-ec2" src="https://github.com/user-attachments/assets/6880b36a-ed6a-47a9-863b-7760e36f7c3f" />
 
 
-How to Deploy
+Steps to deploy
 
 1. Provision Infrastructure
 
@@ -72,7 +70,9 @@ inspec exec https://github.com/your-username/nginx-audit -t ssh://ec2-user@98.81
 
 Cost Optimization & Ownership
 
-To maintain a bias for action and ownership, all resources are tagged with Project: AutomatedPros-Demo. When testing was complete, I deprovisioned the environment instantly to prevent waste using:
+To maintain a bias for action and ownership, all resources are tagged with Project: AutomatedPros-Demo.
+
+When testing was complete, I deprovisioned the environment instantly to prevent waste using:
 
 $ terraform destroy -auto-approve
 
